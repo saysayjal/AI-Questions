@@ -8,23 +8,27 @@ adj_list={
     "f":[],
     "g":[],
     "h":[],
-    "i":[],
+    "i":[]
 }
 
-visited=[],
-queue=[],
+visited=[];
+queue=[];
 traversed_output=[];
-def bfs(visited,graoh,node):
+
+def bfs(visited,graph,node):
     visited.append(node)
-    queue.sppend(node)
-while queue:
-    m=queue.pop(0);
-    traversed_output.append(m);
-    for (neighbor in graph[m]):
-        if neighbor not in visited:
-            visited.append(neighbor);
-            queue.append(neighbor);
-print("our traverse output=".traversed_output);
+    queue.append(node)
+    
+    while queue:
+        m=queue.pop(0);
+        traversed_output.append(m);
+        
+        for neighbor in graph[m]:
+            
+            if neighbor not in visited:
+                visited.append(neighbor);
+                queue.append(neighbor);
+    print("our traverse output=",traversed_output);
 print("Breadth First Search");
 rootnode=input("Enter the root node: ");
 bfs(visited,adj_list,rootnode);
