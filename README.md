@@ -1,1 +1,1 @@
-Contains all the lab reports of AI lab.
+Contains all the lab reports of Artificial Intelligence in Python.
