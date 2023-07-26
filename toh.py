@@ -7,6 +7,6 @@ def hanoi(disks, source, auxiliary, target):
     print('Move disk {} from peg {} to peg {}.'.format(disks, source, target))
     hanoi(disks - 1, auxiliary, source, target)
  
-print("Sayjal")
+
 disks = int(input('Enter number of disks: '))
 hanoi(disks, 'A', 'B', 'C')
